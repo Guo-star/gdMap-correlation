@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./plugin/animate.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>多边形编辑</title>
+  </head>
+  <body>
+    <!-- 地图容器 -->
+    <div id="container"></div>
+    <!-- 工具栏 -->
+    <div class="map-tool">
+      <div class="input-item">
+        <input type="checkbox" class="switchLayer" /> &nbsp;&nbsp;卫星地图
+      </div>
+    </div>
+    <!-- 设置中心点 -->
+    <div class="map-center">
+      <div>输入中心点：</div>
+      <input type="text" class="centerCoord" />
+      <input type="button" class="setCenter" value="确认" />
+    </div>
+    <!-- 生成多边形 -->
+    <div class="map-polygon">
+      <div class="polygonBtns">
+        <input type="button" class="createPolygon" value="以中心点生成四边形" />
+        <input type="button" class="editPolygon" value="开始编辑" />
+        <input type="button" class="waivePolygon" value="放弃编辑" />
+        <input type="button" class="affirmPolygon" value="确认保存" />
+      </div>
+      <!-- 记录顶点坐标 -->
+      <div class="coordinatePoints"></div>
+    </div>
+  </body>
+  <!-- 高德地图 -->
+  <script
+    type="text/javascript"
+    src="https://webapi.amap.com/maps?v=1.4.11&key=636fe6f7eed31b74cf675b8fdaa37f3f&plugin=AMap.PolyEditor"
+  ></script>
+  <!-- jq 要先引入 -->
+  <script src="./plugin/jQuery.min.js"></script>
+  <!-- 自定义工具 -->
+  <script src="./libs/common.js"></script>
+  <!-- 地图 -->
+  <script src="./js/map.js"></script>
+  <!-- 入口 -->
+  <script src="./js/index.js"></script>
+  <script>
+    $(document).ready(function() {
+      new Main()
+    })
+  </script>
+</html>

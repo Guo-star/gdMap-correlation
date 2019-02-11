@@ -1,0 +1,111 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  color: #111213;
+  font-weight: 300;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+// 工具栏
+.map-tool {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 1.64rem;
+  background: #fff;
+  background-clip: border-box;
+  border-width: 0;
+  border-radius: 0.04rem;
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, 0.5);
+  padding: 0.09rem 0.15rem;
+  box-sizing: border-box;
+  font-size: 0.14rem;
+  .input-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 0.36rem;
+    input {
+      width: 0.14rem;
+      height: 0.14rem;
+    }
+  }
+}
+
+// 设置中心点
+.map-center {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.2rem;
+  width: 3.4rem;
+  background: #fff;
+  background-clip: border-box;
+  border-width: 0;
+  border-radius: 0.04rem;
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, 0.5);
+  padding: 0.09rem 0.15rem;
+  box-sizing: border-box;
+  font-size: 0.14rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  input[type='text'] {
+    width: 1.8rem;
+  }
+  input[type='button'] {
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: #fff;
+    margin-left: 0.08rem;
+  }
+}
+
+// 生成多边形
+.map-polygon {
+  position: absolute;
+  top: 0.54rem;
+  left: 0.2rem;
+  width: 3.4rem;
+  background: #fff;
+  background-clip: border-box;
+  border-width: 0;
+  border-radius: 0.04rem;
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, 0.5);
+  padding: 0.09rem 0.15rem;
+  box-sizing: border-box;
+  font-size: 0.14rem;
+  .polygonBtns {
+    input[type='button'] {
+      margin-right: 0.06rem;
+      cursor: pointer;
+      padding: 0;
+      outline: none;
+      border: none;
+      background: #fff;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+  .coordinatePoints {
+    margin-top: 0.1rem;
+    text-align: center;
+  }
+}
